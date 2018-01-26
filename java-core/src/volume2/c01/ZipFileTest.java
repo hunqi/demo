@@ -22,8 +22,9 @@ public class ZipFileTest {
 	
 	@Test
 	public void run() throws IOException{
-		test2();
-		test3();
+		System.out.println(System.getProperty("user.dir"));
+//		test2();
+//		test3();
 	}
 	
 	void test3() throws IOException{

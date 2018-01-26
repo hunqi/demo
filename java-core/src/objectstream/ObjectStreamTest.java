@@ -26,11 +26,13 @@ public class ObjectStreamTest {
 		staff[1] = harry;
 		staff[2] = tony;
 		
+		System.out.println("write out employees:");
 		//save all employee records to the file employee.dat
 		try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(Constant.BASE_DIR + "employee.dat"))){
-			out.writeObject(staff);			
+			out.writeObject(staff);		
 		}
 		
+		System.out.println("read in employees:");
 		try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(Constant.BASE_DIR + "employee.dat"))){
 			
 			//retrieve all records into a new arry
