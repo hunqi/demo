@@ -23,7 +23,7 @@ public class OptionalTest {
         System.out.println("result: " + result);
         try {
             result = optionalString.orElseThrow(IllegalStateException::new);
-        }catch (Throwable e){
+        } catch (Throwable e) {
             e.printStackTrace();
         }
 
@@ -31,7 +31,16 @@ public class OptionalTest {
         optionalString.ifPresent(s -> System.out.println(s + " contains 北京"));
 
         Set<String> results = new HashSet<>();
+        optionalValue.ifPresent(results::add);
+        Optional<Boolean> added = optionalValue.map(results::add);
+        System.out.println(added);
 
+        System.out.println(inverse(4.0).flatMap(OptionalTest::squareRoot));
+        System.out.println(inverse(-1.0).flatMap(OptionalTest::squareRoot));
+
+        System.out.println(inverse(0.0).flatMap(OptionalTest::squareRoot));
+        Optional<Double> result2 = Optional.of(-4.0).flatMap(OptionalTest::inverse).flatMap(OptionalTest::squareRoot);
+        System.out.println(result2);
     }
 
     static Optional<Double> inverse(Double x) {
