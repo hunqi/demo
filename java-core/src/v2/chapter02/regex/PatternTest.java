@@ -13,6 +13,7 @@ public class PatternTest {
         Matcher m = p.matcher("aaaaab");
         boolean b = m.matches();
         System.out.println("b: " + b);
+        System.out.println("user.dir: " + System.getProperty("user.dir"));
     }
 
 }
