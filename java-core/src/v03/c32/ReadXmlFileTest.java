@@ -28,14 +28,17 @@ public class ReadXmlFileTest {
         NodeList children = root.getChildNodes();
         System.out.println("childNodes.size: " + children.getLength());
 
-        for (int i=0; i<children.getLength(); i++){
+        for (int i = 0; i < children.getLength(); i++) {
             Node node = children.item(i);
-            if(node instanceof Element){
-                Element  elmt = (Element) node;
+            if (node instanceof Element) {
+                Element elmt = (Element) node;
                 Text textNode = (Text) elmt.getFirstChild();
                 String text = textNode.getData();
-                System.out.println(elmt.getTagName() + "=" + text);
+                if (elmt.getTagName().equals("name")) {
+                    System.out.println(elmt.getTagName() + "=" + text);
+                }
             }
+
         }
 
     }
