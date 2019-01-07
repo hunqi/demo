@@ -244,7 +244,7 @@ class DataPanel extends JPanel {
      * @param rs
      */
     public void showRow(RowSet rs) throws SQLException {
-        for (int i = 0; i < fields.size(); i++) {
+        for (int i = 1; i < fields.size(); i++) {
             String field = rs == null ? "" : rs.getString(i);
             JTextField tb = fields.get(i - 1);
             tb.setText(field);
