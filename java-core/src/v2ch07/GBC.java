@@ -1,4 +1,4 @@
-package v2ch07.numberformat;
+package v2ch07;
 
 /*
 GBC - A convenience class to tame the GridBagLayout

@@ -1,5 +1,7 @@
 package v2ch07.numberformat;
 
+import v2ch07.GBC;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
