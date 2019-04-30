@@ -1,15 +1,16 @@
-package tij.holding;
+package tij.holding.excs20;
 
 import tij.util.TextFile;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class UniqueWords {
 
     public static void main(String[] args) {
 
         TextFile strings = new TextFile("D:\\ray.sun\\git\\demo\\java-core\\src\\tij\\holding\\SetOperations.java", "\\W+");
-        System.out.println("strings: \n" + strings + "\n");
+//        System.out.println("strings: \n" + strings + "\n");
 
         Set<String> words = new TreeSet<>(strings);
         System.out.println(words + "\n");
@@ -22,19 +23,16 @@ public class UniqueWords {
         for (String s : words) {
             for (int i = 0, len = s.length(); i < len; i++) {
                 if (vowelSet.contains(s.charAt(i) + "")) {
-                    vowelCountMap.put(s, vowelCountMap.get(s) == null ? 1 : vowelCountMap.get(s) + 1);
+                    vowelCountMap.put(s.charAt(i) + "", vowelCountMap.get(s.charAt(i) + "") == null ? 1 : vowelCountMap.get(s.charAt(i) + "") + 1);
                 }
             }
         }
 
-        int totalVowels = 0;
-        Set<Map.Entry<String, Integer>> entries = vowelCountMap.entrySet();
-        for (Map.Entry<String, Integer> m : entries) {
-            System.out.println(m.getKey() + ": " + m.getValue());
-            totalVowels += m.getValue();
-        }
+        System.out.println("occurrence times of each vowel: ");
+        System.out.println("\t" + vowelCountMap + "\n");
 
-        System.out.println("totalVowels: " + totalVowels);
+        System.out.println("total times of vowel occurrence: "
+                + vowelCountMap.values().stream().collect(Collectors.summarizingInt(Integer::valueOf)).getSum());
     }
 
 }
