@@ -1,4 +1,4 @@
-package cn.rs.demo.tij.typeinfo;
+package typeinfo;
 
 import java.util.Arrays;
 import java.util.List;

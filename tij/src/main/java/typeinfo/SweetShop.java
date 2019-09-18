@@ -1,4 +1,4 @@
-package cn.rs.demo.tij.typeinfo;
+package typeinfo;
 
 public class SweetShop {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class SweetShop {
         new Candy();
         System.out.println("After creating Candy");
         try {
-            Class.forName("cn.rs.demo.tij.typeinfo.Gum");
+            Class.forName("typeinfo.Gum");
         } catch (ClassNotFoundException e) {
             System.out.println("Couldn’t find Gum");
         }

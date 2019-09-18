@@ -1,4 +1,4 @@
-package cn.rs.demo.tij.typeinfo;
+package typeinfo;
 
 import java.lang.reflect.Field;
 

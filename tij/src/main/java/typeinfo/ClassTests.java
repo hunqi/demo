@@ -1,4 +1,4 @@
-package cn.rs.demo.tij.typeinfo;
+package typeinfo;
 
 public class ClassTests {
 

@@ -1,4 +1,4 @@
-package cn.rs.demo.tij.typeinfo.toys;
+package typeinfo.toys;
 
 public class ToyTest {
 
@@ -13,7 +13,7 @@ public class ToyTest {
 
         Class c = null;
         try {
-            c = Class.forName("cn.rs.demo.tij.typeinfo.toys.FancyToy");
+            c = Class.forName("typeinfo.toys.FancyToy");
         } catch (ClassNotFoundException e) {
             System.out.println("Can’t find FancyToy");
             System.exit(1);

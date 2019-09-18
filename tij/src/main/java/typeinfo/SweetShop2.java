@@ -1,4 +1,4 @@
-package cn.rs.demo.tij.typeinfo;
+package typeinfo;
 
 /**
  * Exercise 7: (3) Modify SweetShop.java so that each type of object creation is
@@ -17,7 +17,7 @@ public class SweetShop2 {
         System.out.println("inside main");
         System.out.printf("Begin creating : %s\n", args[0]);
         try {
-            Class.forName("cn.rs.demo.tij.typeinfo." + args[0]);
+            Class.forName("typeinfo." + args[0]);
         } catch (ClassNotFoundException e) {
             System.out.printf("Couldn’t find %s\n", args[0]);
         }
