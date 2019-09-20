@@ -6,8 +6,9 @@ import java.util.ArrayList;
 // Facade to produce a default PetCreator.
 public class Pets {
 
-    public static final PetCreator creator =
-            new LiteralPetCreator();
+//    public static final PetCreator creator =
+//            new LiteralPetCreator();
+    public static final PetCreator creator = new PetRegisteredFactory();
 
     public static Pet randomPet() {
         return creator.randomPet();
