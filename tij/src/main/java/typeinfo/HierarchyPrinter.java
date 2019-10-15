@@ -29,7 +29,7 @@ public class HierarchyPrinter {
 
 }
 
-class Student extends Person {
+class Student extends Person1 {
 
     String studentId;
     School school;
@@ -63,7 +63,7 @@ class School {
     }
 }
 
-class Person {
+class Person1 {
     String name;
     int age;
 
