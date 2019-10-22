@@ -9,19 +9,19 @@ import java.util.Random;
 
 // Generate different types of Coffee:
 public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
-//    private Class[] types = {Latte.class, Mocha.class,
-//            Cappuccino.class, Americano.class, Breve.class,};
+    private Class[] types = {Latte.class, Mocha.class,
+            Cappuccino.class, Americano.class, Breve.class,};
 
 
-    private static List<Factory<Coffee>> factories = new ArrayList<>();
-
-    static {
-        factories.add(() -> new Latte());
-        factories.add(() -> new Mocha());
-        factories.add(() -> new Cappuccino());
-        factories.add(() -> new Americano());
-        factories.add(() -> new Breve());
-    }
+//    private static List<Factory<Coffee>> factories = new ArrayList<>();
+//
+//    static {
+//        factories.add(() -> new Latte());
+//        factories.add(() -> new Mocha());
+//        factories.add(() -> new Cappuccino());
+//        factories.add(() -> new Americano());
+//        factories.add(() -> new Breve());
+//    }
 
     private static Random rand = new Random(47);
 
@@ -36,14 +36,14 @@ public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
     }
 
     public Coffee next() {
-//        try {
-//            return (Coffee)
-//                    types[rand.nextInt(types.length)].newInstance();
-//            // Report programmer errors at run time:
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-        return factories.get(rand.nextInt(factories.size())).create();
+        try {
+            return (Coffee)
+                    types[rand.nextInt(types.length)].newInstance();
+            // Report programmer errors at run time:
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+//        return factories.get(rand.nextInt(factories.size())).create();
     }
 
     class CoffeeIterator implements Iterator<Coffee> {
