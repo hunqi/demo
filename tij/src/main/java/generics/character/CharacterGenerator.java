@@ -1,6 +1,6 @@
 package generics.character;
 
-import generics.coffee.Generator;
+import util.Generator;
 
 import java.util.ArrayList;
 import java.util.Iterator;

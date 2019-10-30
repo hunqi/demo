@@ -1,6 +1,7 @@
 package generics.coffee;
 
 import typeinfo.factory.Factory;
+import util.Generator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
