@@ -1,0 +1,9 @@
+
+Hsquid:S1172V"*Remove this unused method parameter "arr".(Ìñ8ÅŞêÅ”.
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(Çµí‘8¶È‡Ä”.
+?squid:S1643/"Use a StringBuilder instead.(µÁ´ıÿÿÿÿÿ8÷µïÅ”.
+osquid:S34578"Q%n should be used in place of \n to produce the platform-specific line separator.(Ş„Ù8¶È‡Ä”.
+?squid:S1643A"Use a StringBuilder instead.(Ÿ¾è¸üÿÿÿÿ8ò†šÅ”.
+osquid:S3457&"Q%n should be used in place of \n to produce the platform-specific line separator.(Ş„Ù8¶È‡Ä”.
+9squid:S1643"Use a StringBuilder instead.(µå«C8Ò…ıÅ”.
+?squid:S1643M"Use a StringBuilder instead.( ÀÛÁûÿÿÿÿ8¢¾ùÄ”.

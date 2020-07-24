@@ -1,6 +1,6 @@
 package v2ch09.classloader;
 
-import v2ch08.GBC;
+import v2ch07.GBC;
 
 import javax.swing.*;
 import java.awt.*;

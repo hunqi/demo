@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE font [
+        <!ELEMENT font (name,size)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT size (#PCDATA)>
+        ]>
+<font>
+    <name>Helvetica</name>
+    <size>20</size>
+</font>

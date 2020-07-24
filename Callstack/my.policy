@@ -1,0 +1,12 @@
+
+grant codeBase "file:D:/develop/repo/github-rs/demo/Callstack/out/artifacts/DataAccess.jar" {
+    permission java.io.FilePermission "c:/temp/message.txt", "write";
+};
+
+grant codeBase "file:D:/develop/repo/github-rs/demo/Callstack/out/artifacts/Service.jar" {
+    //permission java.io.FilePermission "c:/temp/message.txt", "write";
+};
+
+grant codeBase "file:D:/develop/repo/github-rs/demo/Callstack/out/production/Runner/*" {
+    //permission java.io.FilePermission "c:/temp/message.txt", "write";
+};

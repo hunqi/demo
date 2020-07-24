@@ -76,7 +76,17 @@ public class StringUtils {
         return c == 32;
     }
 
+    public static String reverse(String s){
+        char[] arr = new char[s.length()];
+        for (int i=s.length() - 1; i>=0; i--)
+            arr[s.length() - i - 1] = s.charAt(i);
+
+        return new String(arr);
+    }
+
     public static void main(String[] args) {
+        System.out.println(reverse("hello"));
+        System.out.println(reverse("java"));
 //        char c = ' ';
 //        int cval = c;
 //        System.out.println("cval=" + cval);
@@ -87,8 +97,8 @@ public class StringUtils {
 //        System.out.println(isNoTextCharacter("          "));
 //        System.out.println(isNoTextCharacter("  0   "));
 
-        String s1 = "";
-        String s2 = "";
+//        String s1 = "";
+//        String s2 = "";
 //        System.out.println(compare(s1, s2));
 //
 //        s1 = "a";
@@ -107,9 +117,9 @@ public class StringUtils {
 //        s2 = "abcd";
 //        System.out.println(compare(s1, s2));
 
-        s1 = "abcd  d";
-        s2 = "abcd  c";
-        System.out.println(compare(s1, s2));
+//        s1 = "abcd  d";
+//        s2 = "abcd  c";
+//        System.out.println(compare(s1, s2));
     }
 
 }

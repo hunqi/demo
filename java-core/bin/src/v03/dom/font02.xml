@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- DOCTYPE must be root element -->
+<!DOCTYPE font SYSTEM "config.dtd">
+<font>
+    <name>Helvetica</name>
+    <size>20</size>
+</font>

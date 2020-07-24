@@ -1,0 +1,4 @@
+
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ì ÞÍ8±‚»Ë·.
+®%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78±‚»Ë·.
+osquid:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(•æ­ñ8¸‘½Ë·.

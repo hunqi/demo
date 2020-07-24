@@ -1,0 +1,20 @@
+[
+  {
+  "id": "1",
+  "productId": 1,
+  "version": 1,
+  "entries": [
+    {"username": "user1", "date": "2020-07-24T17:01:30.888+0000", "review": "This is a review"}
+  ]
+  },
+  {
+    "id": "2",
+    "productId": 2,
+    "version": 7,
+    "entries": [
+      {"username": "user2", "date": "2020-07-24T17:01:30.888+0000", "review": "This is a review"},
+      {"username": "user3", "date": "2020-07-24T17:01:30.888+0000", "review": "This is another review"},
+      {"username": "user4", "date": "2020-07-24T17:01:30.888+0000", "review": "This is third review"}
+    ]
+  }
+]

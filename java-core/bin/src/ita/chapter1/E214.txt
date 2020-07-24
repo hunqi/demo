@@ -1,0 +1,17 @@
+
+//carry 进位
+//array A, B, C
+//carry = 0
+for i=n downto 1
+    sum = A[i] + B[i] + carry;
+    if(sum == 3)
+        carry = 1;
+        C[i+1] = 1;
+    else if(sum == 2)
+        carry = 1;
+        C[i+1] = 0;
+    else
+        carry = 0;
+        C[i+1] = sum;
+if(carry == 1)
+    C[1] == 1;
