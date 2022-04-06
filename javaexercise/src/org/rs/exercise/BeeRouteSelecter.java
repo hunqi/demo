@@ -51,23 +51,23 @@ public class BeeRouteSelecter {
         positions.addAll(route.getPositions());
         positions.add(new Position(0, 0));
 
-        Double totalDistance = 0d;
+        BigDecimal totalDistance = BigDecimal.ZERO;
         for (int i=1; i<positions.size(); i++) {
             Position start = positions.get(i - 1);
             Position end = positions.get(i);
-            totalDistance += getDistanceBtw2Positions(start, end);
+            totalDistance = totalDistance.add(getDistanceBtw2Positions(start, end));
         }
-        distance.setDistance(totalDistance);
+        distance.setDistance(totalDistance.doubleValue());
 
         return distance;
     }
 
     private static final MathContext MATH_CONTEXT = new MathContext(2, RoundingMode.HALF_UP);
-    private double getDistanceBtw2Positions(Position start, Position end) {
+    private BigDecimal getDistanceBtw2Positions(Position start, Position end) {
         BigDecimal x2Delta = new BigDecimal(Math.pow(end.getX() - start.getX(), 2), MATH_CONTEXT);
         BigDecimal y2Delta = new BigDecimal(Math.pow(end.getY() - start.getY(), 2), MATH_CONTEXT);
 
-        return x2Delta.add(y2Delta).sqrt(MATH_CONTEXT).doubleValue();
+        return x2Delta.add(y2Delta).sqrt(MATH_CONTEXT);
     }
 
     public List<RouteDistance> calDistancesOfRoutes(List<Route> routes) {
@@ -75,7 +75,7 @@ public class BeeRouteSelecter {
     }
 
     public RouteDistance getShortestRoute(List<RouteDistance> distances) {
-        Collections.sort(distances, (d1, d2) -> (int) (d1.getDistance() - d2.getDistance()));
+        Collections.sort(distances, (d1, d2) -> (int) ((d1.getDistance() - d2.getDistance()) * 100));
         // print detail of route
         distances.stream().forEach(d -> System.out.println(d));
         return distances.get(0);
